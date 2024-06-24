@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Online Ordering System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <div class="text-box">
+        <h1 class="primary-heading">
+            <span class="heading-primary-main">outdoors</span>
+            <span class="heading-primary-sub">is where life happens</span>
+           
+       </h1>
+    </div>
+  </header>
+
+
+  <section id="menu">
+
+    <!-- Add this structure for each menu item -->
+<div class="item">
+    <div class="flip-container">
+      <div class="front box image-container">
+        <!-- Front content goes here -->
+        <img src="https://www.thedailymeal.com/img/gallery/what-a-beginner-needs-to-know-about-ordering-shawarma/intro-1681948540.jpg" alt="Burger">
+        <h2>Shawarma</h2>
+        <p>Delicious burger with all the fixings.</p>
+        <p>$10.99</p>
+      </div>
+      <div class="back">
+        <!-- Back content goes here -->
+        <p>Additional details or special offers can be displayed here.</p>
+        <button onclick="addToCart('Burger', 10.99)">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+  
+    <div class="item">
+        <div class="flip-container">
+        <div class="front">
+      <img src="https://www.eatthis.com/wp-content/uploads/sites/4/2022/04/burger-fries.jpg?quality=82&strip=all"alt="Burger">
+      <h2>Burger</h2>
+      <p>Delicious burger with all the fixings.Our famous burger made with crispy on the outside
+         juicy on the inside chicken breast topped with seasoned cabbage & drizzled with spicy 
+         Zinger sauce all served in a soft sesame seed bun.</p>
+      <p>$10.99</p>
+    </div>
+    <div class="back">
+        <!-- Back content goes here -->
+        <p>Additional details or special offers can be displayed here.</p>
+        <button onclick="addToCart('Burger', 10.99)">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+
+    <div class="item">
+        <div class="flip-container">
+            <div class="front">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg" alt="Pizza">
+      <h2>Pizza</h2>
+      <p>Classic pizza with your favorite toppings.</p>
+      <p>$14.99</p>
+    </div>
+    <div class="back">
+        <!-- Back content goes here -->
+        <p>Additional details or special offers can be displayed here.</p>
+        <button onclick="addToCart('Pizza', 14.99)">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+
+    <div class="item">
+        <div class="flip-container">
+            <div class="front">
+      <img src="https://images.immediate.co.uk/production/volatile/sites/30/2013/05/Puttanesca-fd5810c.jpg?quality=90&resize=556,505" alt="Pasta">
+      <h2>Pasta</h2>
+      <p>Spaghetti with rich tomato sauce.</p>
+      <p>$12.99</p>
+    </div>
+    <div class="back">
+        <!-- Back content goes here -->
+        <p>Additional details or special offers can be displayed here.</p>
+        <button onclick="addToCart('Pasta', 12.99)">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+
+
+    <div class="item">
+        <div class="flip-container">
+            <div class="front">
+      <img src="biryani.jpg" alt="Biryani">
+      <h2>Biryani</h2>
+      <p>Fragrant rice dish with flavorful spices.</p>
+      <p>$15.99</p>
+    </div>
+    <div class="back">
+        <!-- Back content goes here -->
+        <p>Additional details or special offers can be displayed here.</p>
+        <button onclick="addToCart('Biryani', 15.99)">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+
+
+    <div class="item">
+        <div class="flip-container">
+            <div class="front">
+      <img src="fries.jpg" alt="Fries">
+      <h2>Fries</h2>
+      <p>Crispy golden fries, perfect as a side.</p>
+      <p>$5.99</p>
+    </div>
+    <div class="back">
+        <!-- Back content goes here -->
+        <p>Additional details or special offers can be displayed here.</p>
+        <button onclick="addToCart('Fries', 5.99)">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+    <!-- Add two more items as needed -->
+
+  </section>
+
+  <section class="outer-container">
+    <div class="video-container">
+        <video src="video (720p).mp4" autoplay loop muted></video>
+
+    </div>
+    <div class="overlay"></div>
+    <div class="text-box">
+        <h1 class="primary-heading">
+            <span class="heading-primary-you">WELCOME TO MY KITCHEN</span>
+            <span class="heading-primary-youu">Discover a world of culinary delight with our unique and tasty recipes. Elevate your dining experience with innovative flavors and exquisite combinations. Unleash your inner chef and savor the extraordinary in every bite.</span>
+           </h1>
+    </div>
+
+  </section>
+
+  <section>
+    <div class="recipe-container">
+        <div class="recipe-card">
+          <img class="recipe-image" src="https://hips.hearstapps.com/hmg-prod/images/20190503-delish-pineapple-baked-salmon-horizontal-ehg-450-1557771120.jpg" alt="Recipe Image 1">
+          <div class="recipe-details">
+            <h2 class="recipe-title">Fractured Delight 1</h2>
+            <p class="recipe-description">Experience a symphony of flavors with our uniquely fractured recipe. A delightful culinary journey awaits!</p>
+          </div>
+        </div>
+    
+        <div class="recipe-card">
+          <img class="recipe-image" src="https://image.shutterstock.com/image-photo/chicken-fillet-salad-healthy-food-260nw-1721943142.jpg" alt="Recipe Image 2">
+          <div class="recipe-details">
+            <h2 class="recipe-title">Fractured Delight 2</h2>
+            <p class="recipe-description">Another unique and tasty fractured recipe to tantalize your taste buds. Don't miss out!</p>
+          </div>
+        </div>
+    
+        <div class="recipe-card">
+          <img class="recipe-image" src="https://www.mashed.com/img/gallery/the-best-new-fast-food-menu-items-weve-tried-in-2023-so-far/l-intro-1682446897.jpg" alt="Recipe Image 3">
+          <div class="recipe-details">
+            <h2 class="recipe-title">Fractured Delight 3</h2>
+            <p class="recipe-description">Indulge in a culinary masterpiece with our third fractured recipe. Uniqueness on every plate!</p>
+          </div>
+        </div>
+
+        <div class="recipe-card">
+            <img class="recipe-image" src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/health/wp-content/uploads/2023/09/healthy_fast_food_1.jpeg" alt="Recipe Image 2">
+            <div class="recipe-details">
+              <h2 class="recipe-title">Fractured Delight 2</h2>
+              <p class="recipe-description">Experience a symphony of flavors with our uniquely fractured recipe. A delightful culinary journey awaits!</p>
+            </div>
+          </div>
+
+          <div class="recipe-card">
+            <img class="recipe-image" src="https://i.ndtvimg.com/i/2017-01/junk-food_625x350_41485523874.jpg" alt="Recipe Image 2">
+            <div class="recipe-details">
+              <h2 class="recipe-title">Fractured Delight 2</h2>
+              <p class="recipe-description">Another unique and tasty fractured recipe to tantalize your taste buds. Don't miss out!</p>
+            </div>
+          </div>
+
+          
+      
+    </div>
+ 
+
+      <section id="test-my">
+    <div class="skewed">
+    <div class="text">
+        <small class="hello-g">MY KITCHEN</small>
+        <h1 class="tum-ho">Fast Food</h1>
+        <p class="ye-ha">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci temporibus quibusdam, nihil quo, voluptatibus voluptatem neque facilis sequi ipsam veritatis amet aut reiciendis dolore quis molestias laboriosam! Quod, itaque? At.</p>
+        <a href="#">read more &rarr;</a>
+     </div>
+    <div class="image">
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBs3zJ7xxYJPkS0scZrLVSUac76X9-fLTptIqYc41jYJ5jFvecfzQkkthuD34ZP0VEnMc&usqp=CAU">
+        </div>
+    </div>
+    </div>
+
+
+    <div class="skewed skewed-left">
+        <div class="image">
+            <div>
+                <img src="https://images.deliveryhero.io/image/fd-pk/LH/s5ul-hero.jpg">
+            </div>
+        </div>
+       <div class="text">
+        <small class="hello-g">MY KITCHEN</small>
+        <h1 class="tum-ho">Fast Food</h1>
+        <p class="ye-ha">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci temporibus quibusdam, nihil quo, voluptatibus voluptatem neque facilis sequi ipsam veritatis amet aut reiciendis dolore quis molestias laboriosam! Quod, itaque? At.</p>
+        <a href="#">read more &rarr;</a>
+
+    </div>
+    </div>
+  </section>
+
+
+  <section id="cart">
+    <h2>Shopping Cart</h2>
+    <ul id="cart-items"></ul>
+    <p>Total: <span id="total">$0.00</span></p>
+    <button onclick="checkout()">Checkout</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

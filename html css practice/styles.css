@@ -1,0 +1,572 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    height: 60vh;
+    background-image:linear-gradient(to right bottom, #333, #faae90c5 ),url(shopping.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative; 
+  }
+  .text-box{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+
+}
+
+
+.primary-heading{
+color: #fff;
+text-transform: uppercase;
+backface-visibility: hidden;
+margin-bottom: 60px;
+}
+
+
+.heading-primary-main{
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+
+}
+
+.heading-primary-sub{
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+   
+   }
+   
+   @keyframes moveInLeft{
+       0% {
+           opacity: 0;
+           transform: translateX(-10rem);
+       }
+   
+       80% {
+               transform: translateX(1rem);
+       }
+   
+       100% {
+           opacity: 1;
+           transform: translate(0);
+       }
+   }
+   @keyframes moveInRight{
+       0% {
+           opacity: 0;
+           transform: translateX(10rem);
+       }
+   
+       80% {
+               transform: translateX(-1rem);
+       }
+   
+       100% {
+           opacity: 1;
+           transform: translate(0);
+       }
+   }
+   
+   
+   @keyframes moveInBottom{
+       0% {
+           opacity: 0;
+           transform: translateY(3rem);
+       }
+       100% {
+           opacity: 1;
+           transform: translate(0);
+       }
+   }
+
+
+
+  h2{
+    color: white;
+  }
+  p{
+    color: white;
+  }
+  
+  #menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2em;
+    background-color: rgb(61, 60, 60);
+  }
+
+  .item {
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    margin: 1em;
+    padding: 1em;
+    text-align: center;
+    border-width: 3px;
+    border-color: lightcoral ;
+
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+
+  .cart-button {
+    margin-top: auto;
+    transform: translateY(100%);
+    transition: transform 0.3s, width 0.3s;
+  }
+  
+  .item:hover .cart-button {
+    transform: translateY(0);
+    width: 100%;
+  }
+  
+  @keyframes rotateBorder {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+ 
+ 
+  
+  
+  
+  
+  
+  
+  button {
+    background-color: orangered;
+    color: #fff;
+    padding: 0.5em 5em;
+    
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #faae90c5;
+  }
+  
+  #cart {
+    background-color: #f2f2f2;
+    padding: 2em;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    margin: 0.5em 0;
+  }
+  
+  
+      .item {
+        position: relative;
+        width: 100%;
+        max-width: 300px;
+        height: 430px;
+        margin: 1em;
+        text-align: center;
+        border-radius: 5px;
+        overflow: hidden;
+        perspective: 1000px;
+        display: flex;
+        border-radius: 5px;
+        overflow: hidden;
+        flex-direction: column;
+      }
+      /* Adjustments for smaller screens */
+      @media (min-width: 768px) {
+        .item {
+          width: 48%;
+        }
+      }
+      
+      /* Flip animation on hover */
+      .item:hover .flip-container {
+        transform: rotateY(180deg);
+      }
+      
+      .flip-container {
+        width: 100%;
+        height: 100%;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+      }
+      
+      .front, .back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+ 
+      }
+      
+      .back {
+        transform: rotateY(180deg);
+      }
+      
+      /* Gradient border animation on hover */
+      .item::before,
+      .item::after {
+        content: '';
+        flex-grow: 1;
+        width: 5px;
+        background: linear-gradient(45deg, #ff7300, #ff0033, #ff7300, #ff0033);
+        opacity: 0;
+        transition: height 0.3s, opacity 0.3s;
+      }
+      
+      .item::before {
+        align-self: flex-start;
+      }
+      
+      .item::after {
+        align-self: flex-end;
+      }
+      
+      .item:hover::before,
+      .item:hover::after {
+        height: 100%;
+        opacity: 1;
+      }
+      
+      .item:hover .cart-button {
+        transform: translateY(0);
+      }
+      
+      .cart-button {
+        margin-top: auto;
+        transform: translateY(100%);
+        transition: transform 0.3s;
+      }
+      
+      @keyframes rotateBorder {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      
+      /* Flip animation on hover */
+      .item:hover .flip-container {
+        transform: rotateY(180deg);
+      }
+      
+      .flip-container {
+        width: 100%;
+        height: 100%;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+      }
+      
+      .front,
+      .back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        backface-visibility: hidden;
+      }
+      
+      .back {
+        transform: rotateY(180deg);
+      }
+      
+
+
+      .outer-container {
+        position: relative;
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        
+      }
+  
+      .video-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 150%; /* Set the width to 100% to cover the entire viewport */
+        height: 100%; /* Set the height to 100% to cover the entire viewport */
+        object-fit: cover; /* Ensure the video maintains its aspect ratio and covers the entire container */
+        z-index: -1;
+        background-color: black;
+        margin-bottom: 20px;
+      }
+    .my-you{
+        color: #fff;
+        text-align: center;
+    }
+    .myy-you{
+        color: #fff;
+        text-align: center;
+    }
+    .heading-primary-you{
+        display: block;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2rem;
+        font-weight: 600;
+        letter-spacing: 20px;
+        padding-bottom: 40px;
+        padding-top: 50px;
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+    
+    }
+    
+    .heading-primary-youu{
+        display: block;
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing:10px ;
+        line-height: 30px;
+        padding-top: 10px;
+        animation-name: moveInRight;
+        animation-duration: 1s;
+       
+       }
+
+
+
+
+       
+      /*
+       .recipe-container {
+        display: flex;
+        gap: 20px; 
+        flex-direction: row; 
+      }
+  
+      .recipe-card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        width: 300px;
+        text-align: center;
+      }
+  
+      .recipe-image {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+      }
+  
+      .recipe-details {
+        padding: 15px;
+      }
+  
+      .recipe-title {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+        color: #333;
+      }
+  
+      .recipe-description {
+        color: #555;
+      }
+      */
+
+
+      .recipe-container {
+        display: flex;
+        gap: 20px; /* Adjust the gap between recipe cards */
+        flex-direction: row; /* Change from the default 'column' to 'row' */
+       background-color: #faae90c5 ;  
+      }
+  
+      .recipe-card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        width: 300px;
+        text-align: center;
+        transition: transform 0.3s; /* Add a transition for smooth zoom effect */
+      }
+  
+      .recipe-card:hover {
+        transform: scale(1.1); /* Zoom in effect on hover */
+      }
+  
+      .recipe-image {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+      }
+  
+      .recipe-details {
+        padding: 15px;
+      }
+  
+      .recipe-title {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+        color: #333;
+      }
+  
+      .recipe-description {
+        color: #555;
+      }
+
+
+
+      .skewed-div {
+        width: 700px;
+        height: 400px;
+        background-color:black;
+        position: relative;
+        transform: skew(-20deg); /* Apply a skew transformation */
+      }
+  
+      .skewed-content {
+        transform: skew(20deg); /* Counteract the parent's skew to keep text horizontal */
+        text-align: center;
+        padding: 20px;
+        color: #fff;
+      }
+
+      #test-my{
+margin: 0%;
+font-family:  Helvetica, sans-serif;
+background: #1f1f1f;
+display: flex;
+min-height: 100vh;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+box-sizing: border-box;
+      }
+
+      .ye-ha{
+        color: #555;
+        font-size: 0.9em;
+        line-height: 23px;
+      }
+      .tum-ho{
+        margin: 0;
+        color: #ddd;
+      }
+      .hello-g{
+        color: #ddd;
+      }
+
+      .skewed{
+        width: 45em;
+        color: #1f1f1f;
+        display: flex;
+        background: #111;
+        margin: 2em 0;
+        box-shadow: rgba(0, 0, 0, 7);
+      }
+      
+      .text{
+        padding: 1.5em;
+        width: 50%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      a{
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .image{
+        width: 50%;
+        height: 17em;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .image::before{
+        content: '';
+        position: absolute;
+        left: -6.1em;
+        top: 50%;
+        transform: translateY(-50%) rotate(20deg);
+        background: #111;
+        width: 40%;
+        height: 140%;
+        box-shadow: rgba(0, 0, 0, 7);
+      }
+
+      .skewed-left .image::before{
+        transform: translateY(-50%) rotate(-20deg);
+        left: initial;
+        right: -6.1em;
+      }
+
+      img{
+        width: 140%;
+
+      }
+      @media screen and (max-width: 750px)
+      {
+        .skewed{
+            display: block;
+            width: 20em;
+        }
+        .image .text{
+            width: 100%;
+        }
+        img{
+            width: 160%;
+            .skewed .image::before{
+                width: 120%;
+                height: 40%;
+                top: -5em;
+                left: 50%;
+                transform: translateY(-50%) rotate(180deg);
+            }
+            .skewed-left  .image::before{
+                transform: translateX(-50%) rotate(-10deg);
+                top: initial;
+                bottom: -5em;
+            }
+        }
+      }
